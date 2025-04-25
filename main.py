@@ -14,7 +14,7 @@ solver.Add(swordsmen*20 + bowmen*10 <= 800)                 # Wood
 solver.Add(bowmen*40 + horsemen*100 <= 600)   
 
 # Maximize the objective function
-solver.Maximize(swordsmen*70 + bowmen*95 + horsemen*230)              # Gold
+solver.Maximize(swordsmen*70 + bowmen*95 + horsemen*230)    # Gold
 
 # Solve problem
 status = solver.Solve()
@@ -31,3 +31,6 @@ if status == pywraplp.Solver.OPTIMAL:
   print(f' - 🐎Horsemen = {horsemen.solution_value()}')
 else:
   print('The solver could not find an optimal solution.')
+
+
+  
