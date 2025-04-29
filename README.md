@@ -15,6 +15,13 @@ Este proyecto resuelve un problema de optimización lineal para maximizar el pod
   - Variables: `swordsmen`, `bowmen`, `horsemen` son enteros no negativos.
 - **Solución óptima**: Aproximadamente 6 espadachines, 0 arqueros, 6 jinetes, con poder = 1800 (puede mostrar valores fraccionarios debido al solver GLOP).
 
+## Codigo
+main.py: Implementa el problema con OR-Tools (pywraplp, solver GLOP). Produce la solución esperada (6 espadachines, 0 arqueros, 6 jinetes, poder = 1800), aunque con valores fraccionarios debido a GLOP (como 6.0000000000000036).
+
+requirements.txt: Incluye ortools==9.11.4210, PuLP==2.9.0, Pyomo==6.8.0, SciPy==1.14.1, aunque 
+
+
+
 ## Estructura del proyecto
 El proyecto utiliza una estructura simple, ya que OR-Tools maneja la optimización. **Por favor, copia el siguiente diagrama para incluirlo en la documentación**:
 
