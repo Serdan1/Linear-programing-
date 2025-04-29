@@ -11,6 +11,20 @@ Este proyecto resuelve un problema de optimización lineal para maximizar el pod
   - Variables: `swordsmen`, `bowmen`, `horsemen` son enteros no negativos.
 - **Solución óptima**: 6 espadachines, 0 arqueros, 6 jinetes, con poder = 1800.
 
+
+## Codigo
+Usa una estructura modular:
+Unidades/: Clases Espadachin, Arquero, Jinete con atributos (comida, madera, oro, poder). Soldados.py es un placeholder vacío.
+
+Recursos/: Funciones verificar_comida, verificar_madera, verificar_oro para validar restricciones. recursos.py es un placeholder vacío.
+
+Poder.py: Función calcular_poder para calcular el poder total.
+
+main.py: Fuerza bruta que itera sobre combinaciones y produce la solución esperada (6 espadachines, 0 arqueros, 6 jinetes, poder = 1800).
+
+requirements.txt: Vacío o con un comentario indicando que no se usan bibliotecas.
+
+
 ## Estructura del proyecto
 El proyecto está organizado en módulos para mantener la lógica clara y modular. **Por favor, copia el siguiente diagrama para incluirlo en la documentación**:
 
