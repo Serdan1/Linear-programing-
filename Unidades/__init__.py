@@ -1,1 +1,3 @@
-from .espadachines import Espadachin\nfrom .arqueros import Arquero\nfrom .jinetes import Jinete
+from .espadachines import Espadachin
+from .arqueros import Arquero
+from .jinetes import Jinete
