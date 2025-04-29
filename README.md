@@ -1,1 +1,53 @@
-# Linear Programming Project\n\nEste proyecto resuelve un problema de optimización lineal para maximizar el poder de un ejército compuesto por espadachines, arqueros, y jinetes, sin usar bibliotecas externas. Se implementa en Python usando un enfoque de fuerza bruta.\n\n## Problema\n- **Objetivo**: Maximizar el poder: `70*swordsmen + 95*bowmen + 230*horsemen`.\n- **Restricciones**:\n  - Comida: `60*swordsmen + 80*bowmen + 140*horsemen <= 1200`\n  - Madera: `20*swordsmen + 10*bowmen <= 800`\n  - Oro: `40*bowmen + 100*horsemen <= 600`\n  - Variables: `swordsmen`, `bowmen`, `horsemen` son enteros no negativos.\n- **Solución óptima**: 6 espadachines, 0 arqueros, 6 jinetes, con poder = 1800.\n\n## Estructura del proyecto\nEl proyecto está organizado en módulos para mantener la lógica clara y modular:\n\n```\nLinear-programing/\n├── Recursos/\n│   ├── Comida.py        # Verifica la restricción de comida\n│   ├── Madera.py        # Verifica la restricción de madera\n│   ├── Oro.py           # Verifica la restricción de oro\n│   ├── __init__.py      # Permite importar funciones\n│   ├── recursos.py      # Placeholder\n├── Unidades/\n│   ├── Soldados.py      # Placeholder\n│   ├── __init__.py      # Permite importar clases\n│   ├── arqueros.py      # Clase Arquero\n│   ├── espadachines.py  # Clase Espadachin\n│   ├── jinetes.py       # Clase Jinete\n├── Poder.py             # Calcula el poder total\n├── main.py              # Lógica principal (fuerza bruta)\n├── README.md            # Documentación\n├── requirements.txt     # Vacío (sin bibliotecas externas)\n```\n\n- **Unidades/**: Contiene clases para las unidades (`Espadachin`, `Arquero`, `Jinete`) con sus costos y poder.\n- **Recursos/**: Contiene funciones para verificar las restricciones de comida, madera, y oro.\n- **Poder.py**: Calcula el poder total de una combinación de unidades.\n- **main.py**: Implementa la lógica de fuerza bruta para encontrar la solución óptima.\n- **requirements.txt**: Vacío, ya que no se usan bibliotecas externas.\n\n## Cómo ejecutar\n1. Clona el repositorio: `git clone https://github.com/Serdan1/Linear-programing.git`\n2. Cambia a la rama `tda`: `git checkout tda`\n3. Ejecuta el programa: `python main.py`\n4. Verás la solución óptima en la consola.\n\n## Resultado\n```\n================= Solución =================\nPoder óptimo = 1800 💪\nEjército:\n - 🗡️ Espadachines = 6\n - 🏹 Arqueros = 0\n - 🐎 Jinetes = 6\n```
+# Linear Programming Project
+
+Este proyecto resuelve un problema de optimización lineal para maximizar el poder de un ejército compuesto por espadachines, arqueros, y jinetes, sin usar bibliotecas externas. Se implementa en Python usando un enfoque de fuerza bruta.
+
+## Problema
+- **Objetivo**: Maximizar el poder: `70*swordsmen + 95*bowmen + 230*horsemen`.
+- **Restricciones**:
+  - Comida: `60*swordsmen + 80*bowmen + 140*horsemen <= 1200`
+  - Madera: `20*swordsmen + 10*bowmen <= 800`
+  - Oro: `40*bowmen + 100*horsemen <= 600`
+  - Variables: `swordsmen`, `bowmen`, `horsemen` son enteros no negativos.
+- **Solución óptima**: 6 espadachines, 0 arqueros, 6 jinetes, con poder = 1800.
+
+## Estructura del proyecto
+El proyecto está organizado en módulos para mantener la lógica clara y modular. **Por favor, copia el siguiente diagrama para incluirlo en la documentación**:
+
+```mermaid
+graph TD
+    A[Linear-programing] --> B[Recursos]
+    A --> C[Unidades]
+    A --> D[Poder.py]
+    A --> E[main.py]
+    A --> F[README.md]
+    A --> G[requirements.txt]
+
+    B --> B1[Comida.py]
+    B --> B2[Madera.py]
+    B --> B3[Oro.py]
+    B --> B4[__init__.py]
+    B --> B5[recursos.py]
+
+    C --> C1[Soldados.py]
+    C --> C2[__init__.py]
+    C --> C3[arqueros.py]
+    C --> C4[espadachines.py]
+    C --> C5[jinetes.py]
+
+    B1 -->|Verifica comida| B
+    B2 -->|Verifica madera| B
+    B3 -->|Verifica oro| B
+    B4 -->|Importa funciones| B
+    B5 -->|Placeholder| B
+
+    C1 -->|Placeholder| C
+    C2 -->|Importa clases| C
+    C3 -->|Clase Arquero| C
+    C4 -->|Clase Espadachin| C
+    C5 -->|Clase Jinete| C
+
+    D -->|Calcula poder| A
+    E -->|Lógica principal| A
+    F -->|Documentación| A
+    G -->|Sin bibliotecas| A
